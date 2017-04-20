@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+
+	<title>一书一世界</title>
+
+
+	<link rel="stylesheet" href="<sp:property value='resourceUri'/>/grand.css" type="text/css"/>
+	<link rel="stylesheet" href="<sp:property value='resourceUri'/>/index.css" type="text/css"/>
+</head>
+<body>
+	<div class="header">
+		<div class="nav center">
+			<img src="<sp:property value='resourceUri'/>/logo.png">
+
+
+
+
+			<ul>
+				<li><a href="<sp:property value="pageUri"/>/index.html">首页</a></li>
+				<li><a href="<sp:property value="pageUri"/>/list/list6286.html"><sp:property value="#columns[6286].title"/></a></li>
+				<li><a href="list.html">望绣窗</a></li>
+				<li><a href="list.html">听雨舟</a></li>
+				<li><a href="list.html">奇妙观</a></li>
+				<li><a href="list.html">黄金屋</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+	<div class="body bg">
+		<div class="coursel">
+			
+
+
+			<div style="background-image:url(<sp:property value='resourceUri'/>/bg.jpg)" class="on cor"></div>
+			<div style="background-image:url(<sp:property value='resourceUri'/>/bg.jpg)" class="cor"></div>
+			<div style="background-image:url(<sp:property value='resourceUri'/>/bg.jpg)" class="cor"></div>
+			<div style="background-image:url(<sp:property value='resourceUri'/>/bg.jpg)" class="cor"></div>
+			<div style="background-image:url(<sp:property value='resourceUri'/>/bg.jpg)" class="cor"></div>
+
+			<span>
+				
+				一书一世界
+
+			</span>
+
+
+
+
+			<div class="signs">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div class="content center ">
+			
+
+
+
+
+			<h5>
+				<img src="<sp:property value='resourceUri'/>/square_blue.png">
+				<sp:property value="#columns[6286].title"/>
+				<img src="<sp:property value='resourceUri'/>/square_blue.png">
+			</h5>
+
+
+
+
+			<div>
+				<img src="">
+
+				<ul>
+					<sp:iterator value="specialData.articleList(6286,1,0)">
+						<li>
+							<img src="<sp:property value='resourceUri'/>/triangle.png">
+							&nbsp;
+						    <a href="<sp:property value="pageUri"/>/<sp:property value="publishUri"/>">
+						        <sp:property value="title"/>
+						    </a>
+					    </li>
+					</sp:iterator>
+				</ul>
+			</div>
+
+
+
+		</div>
+	</div>
+	<div class="footer">
+		<span>一书一世界——海洋之子海洋之窗荣誉出品</span>
+	</div>
+	<script type="text/javascript"src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function init(){
+			var list = $(".coursel > .cor");
+			var on = 0;
+			var winWidth;
+			if (window.innerWidth)
+			winWidth = window.innerWidth;
+			else if ((document.body) && (document.body.clientWidth))
+			winWidth = document.body.clientWidth;
+
+			function swit(a,b){
+				if(a==b){return;}
+					$(list[b]).css('right','-'+winWidth+'px');
+					$(list[a]).animate({'right':winWidth+'px'},1000,function(){$(list[a]).hide()});
+					$(list[b]).show().animate({'right':0+'px'},1000);
+				
+
+				//$(list[a]).fadeOut("normal",function(){$(list[b]).fadeIn("normal")});
+				on=b;
+			}
+			var dots=$(".signs > div");
+
+			var q = setInterval(function(){
+				var pre=on;
+				on++;
+				on%=5;
+				swit(pre,on);
+			},5000)
+
+			$(dots[0]).on("click",function(){
+				swit(on,0);
+				clearInterval(q);
+				q = setInterval(function(){
+					var pre=on;
+					on++;
+					on%=5;
+					swit(pre,on);
+				},5000)
+			})	
+
+			$(dots[1]).on("click",function(){
+				swit(on,1);
+				clearInterval(q);
+				q = setInterval(function(){
+					var pre=on;
+					on++;
+					on%=5;
+					swit(pre,on);
+				},5000)
+			})	
+
+			$(dots[2]).on("click",function(){
+				swit(on,2);
+				clearInterval(q);
+				q = setInterval(function(){
+					var pre=on;
+					on++;
+					on%=5;
+					swit(pre,on);
+				},5000)
+			})	
+
+			$(dots[3]).on("click",function(){
+				swit(on,3);
+				clearInterval(q);
+				q = setInterval(function(){
+					var pre=on;
+					on++;
+					on%=5;
+					swit(pre,on);
+				},5000)
+			})	
+
+			$(dots[4]).on("click",function(){
+				swit(on,4);
+				clearInterval(q);
+				q = setInterval(function(){
+					var pre=on;
+					on++;
+					on%=5;
+					swit(pre,on);
+				},5000)
+			})	
+		}
+		init();
+	</script>
+	</body>
+</html>
+

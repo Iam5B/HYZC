@@ -1,0 +1,105 @@
+/*全局定义*/
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+ul{
+	list-style: none;
+}
+
+.fixedwidth{
+	width:1200px;
+}
+
+.center{
+	margin:auto;
+}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1}
+
+@font-face { 
+  font-family: sqlite; /*这里是说明调用来的字体名字*/ 
+  src: url(http://oop0qv75s.bkt.clouddn.com/s.TTF); /*这里是字体文件路径*/ 
+} 
+
+/*全局定义*/
+
+
+/*导航栏区域*/
+
+.header{
+	height:120px;
+	background:url(nav_background.png) center;
+}
+
+.nav{
+	height:120px;
+	line-height:120px;
+	width:1200px;
+}
+
+.nav *{
+	float:left;
+}
+
+.nav ul{
+	list-style:none;
+}
+
+.nav img{
+	padding-top:35px;
+}
+
+.nav ul li,.nav ul li a{
+	text-decoration: none;
+	width:152px;
+	height:120px;
+	text-align:center;
+	line-height:120px;
+	font-size:20px;
+	font-family:'微软雅黑';
+	color:#ffffff;
+	cursor:pointer;
+}
+
+.nav ul li:hover{
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,0.5);
+	transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s; 
+	-webkit-transition: background-color 0.5s; 
+	-o-transition: background-color 0.5s;
+}
+/*导航栏区域*/
+
+/*正文区域*/
+
+.bg{
+	background-color:#f5f5f5;
+	padding-bottom:40px;
+}
+
+
+/*正文区域*/
+
+
+
+/*底部区域*/
+
+.footer{
+	height:112px;
+	font-size:18px;
+	line-height:112px;
+	text-align:center;
+	background:url(footer_background.png) center;
+}
+
+.footer span{
+	font-family:'微软雅黑';
+	color:#ffffff;
+}
+
+/*底部区域*/
