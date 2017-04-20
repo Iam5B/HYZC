@@ -84,7 +84,7 @@
 				<!-- 还有 首页因为会展现多个不同的列表 所以会有多个不同的jpg，记得是不同的就好-->
 
 				<ul>
-					<sp:iterator value="specialData.articleList(6286,10,0)"><!-- 括号里有三个数字，第一个是栏目ID,第二个是栏目下有多少篇文章，第三个是顺序写0或者1都行 栏目id需要改一下昂-->
+					<sp:iterator value="specialData.articleList(6286,6,0)"><!-- 括号里有三个数字，第一个是栏目ID,第二个是显示该栏目下的n篇文章（考虑到这是主页，显示内容条数应该有限制，所以建议用6），第三个是顺序写0或者1都行 栏目id需要改一下昂-->
 						<li>
 							<img src="<sp:property value='resourceUri'/>/triangle.png">
 							&nbsp;

@@ -6,7 +6,7 @@
 
 	<title>一书一世界</title>
 
-	
+
 	<link rel="stylesheet" href="<sp:property value='resourceUri'/>/grand.css" type="text/css"/>
 	<link rel="stylesheet" href="<sp:property value='resourceUri'/>/list.css" type="text/css"/>
 </head>
@@ -34,15 +34,16 @@
 
 
 
-			<!-- 这里需要改的是栏目ID -->
+			<!-- 这里需要改的是栏目ID 第一次看到这里的时候 你只需要按照某一个栏目的ID来一下就行-->
+			<!-- 也许你会困惑 诶 我不是有5个栏目吗 请先默默改完其余的.html-->
 			<h5>
 				<img src="<sp:property value='resourceUri'/>/square_blue.png">
 				<sp:property value="#columns[6286].title"/><!--这里是栏目标题，改个栏目ID就行-->
 				<img src="<sp:property value='resourceUri'/>/square_blue.png">
 			</h5>
 			<ul>
-				<sp:iterator value="specialData.articleList(6286,10,0)"><!--这里是栏目ID 文章数目 顺序号码（可改成1）记得改 -->
-					<li>
+				<sp:iterator value="specialData.articleList(6286,10,0)"><!--这里括号里三个数字是栏目ID 文章数目 顺序号码（可改成1）记得改（如果哪个栏目文章数超过10的话） -->
+					<li>																										
 						<img src="<sp:property value='resourceUri'/>/triangle.png">
 						&nbsp;
 					    <a href="<sp:property value="pageUri"/>/<sp:property value="publishUri"/>">
