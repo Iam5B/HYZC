@@ -2,7 +2,11 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+
 	<title>一书一世界</title>
+
+	
 	<link rel="stylesheet" href="<sp:property value='resourceUri'/>/grand.css" type="text/css"/>
 	<link rel="stylesheet" href="<sp:property value='resourceUri'/>/list.css" type="text/css"/>
 </head>
@@ -10,19 +14,19 @@
 	<div class="header">
 		<div class="nav center">
 			<img src="<sp:property value='resourceUri'/>/logo.png">
+
+
+			<!--这儿还是导航区域-->
 			<ul>
-			
-
-
 				<li><a href="<sp:property value="pageUri"/>/index.html">首页</a></li>
 				<li><a href="<sp:property value="pageUri"/>/list/list6286.html"><sp:property value="#columns[6286].title"/></a></li>
 				<li><a>望绣窗</a></li>
 				<li><a>听雨舟</a></li>
 				<li><a>奇妙观</a></li>
 				<li><a>黄金屋</a></li>
-	
-
 			</ul>
+			<!--首页做好了的话可以直接复制粘贴把上面这块替换掉-->
+
 		</div>
 	</div>
 	<div class="body bg">
@@ -30,18 +34,14 @@
 
 
 
-
+			<!-- 这里需要改的是栏目ID -->
 			<h5>
 				<img src="<sp:property value='resourceUri'/>/square_blue.png">
-				<sp:property value="#columns[6286].title"/>
+				<sp:property value="#columns[6286].title"/><!--这里是栏目标题，改个栏目ID就行-->
 				<img src="<sp:property value='resourceUri'/>/square_blue.png">
 			</h5>
-
-
-
-
 			<ul>
-				<sp:iterator value="specialData.articleList(6286,1,0)">
+				<sp:iterator value="specialData.articleList(6286,10,0)"><!--这里是栏目ID 文章数目 顺序号码（可改成1）记得改 -->
 					<li>
 						<img src="<sp:property value='resourceUri'/>/triangle.png">
 						&nbsp;
@@ -51,7 +51,7 @@
 					</li>
 				</sp:iterator>
 			</ul>
-
+			<!-- ... -->
 
 
 

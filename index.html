@@ -4,7 +4,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 
 
+	<!-- 专题名 -->
 	<title>一书一世界</title>
+	<!-- 上面那个是专题名字可以改一改昂 -->
 
 
 	<link rel="stylesheet" href="<sp:property value='resourceUri'/>/grand.css" type="text/css"/>
@@ -17,16 +19,13 @@
 
 
 
-
+			<!-- 下面这是导航栏区域的代码，修改过程见WORD -->
 			<ul>
 				<li><a href="<sp:property value="pageUri"/>/index.html">首页</a></li>
 				<li><a href="<sp:property value="pageUri"/>/list/list6286.html"><sp:property value="#columns[6286].title"/></a></li>
-				<li><a href="list.html">望绣窗</a></li>
-				<li><a href="list.html">听雨舟</a></li>
-				<li><a href="list.html">奇妙观</a></li>
-				<li><a href="list.html">黄金屋</a></li>
+				<li><a href="#"></a></li>
 			</ul>
-
+			<!--  -->
 
 
 
@@ -35,20 +34,22 @@
 	<div class="body bg">
 		<div class="coursel">
 			
+			<!-- 图片轮播，相关说明见WORD -->
+			<div style="background-image:url(<sp:property value='resourceUri'/>/bg1.jpg)" class="on cor"></div>
+			<div style="background-image:url(<sp:property value='resourceUri'/>/bg2.jpg)" class="cor"></div>
+			<div style="background-image:url(<sp:property value='resourceUri'/>/bg3.jpg)" class="cor"></div>
+			<div style="background-image:url(<sp:property value='resourceUri'/>/bg4.jpg)" class="cor"></div>
+			<div style="background-image:url(<sp:property value='resourceUri'/>/bg5.jpg)" class="cor"></div>
+			<!--  -->
 
 
-			<div style="background-image:url(<sp:property value='resourceUri'/>/bg.jpg)" class="on cor"></div>
-			<div style="background-image:url(<sp:property value='resourceUri'/>/bg.jpg)" class="cor"></div>
-			<div style="background-image:url(<sp:property value='resourceUri'/>/bg.jpg)" class="cor"></div>
-			<div style="background-image:url(<sp:property value='resourceUri'/>/bg.jpg)" class="cor"></div>
-			<div style="background-image:url(<sp:property value='resourceUri'/>/bg.jpg)" class="cor"></div>
-
+			<!--下面这个是图片轮播上面白块里面的文字 可以修改-->
 			<span>
 				
 				一书一世界
 
 			</span>
-
+			<!-- -->
 
 
 
@@ -66,20 +67,24 @@
 
 
 
+			<!-- 此处和前面那个导航栏是一个意思，都是改数字，数字是子栏目ID -->
 			<h5>
 				<img src="<sp:property value='resourceUri'/>/square_blue.png">
-				<sp:property value="#columns[6286].title"/>
+				<sp:property value="#columns[6286].title"/>  <!--ID在左边-->
 				<img src="<sp:property value='resourceUri'/>/square_blue.png">
 			</h5>
-
-
-
-
 			<div>
-				<img src="">
+
+				<!-- 下面这个双引号里面的是首页每个分栏目里面对应的图片修改方法同轮播背景图 -->
+				<!-- 请找美工要宽度为300px高度为340px的图片 格式尽量jpg -->
+				<!-- 然后同前面一样作为静态资源上传 -->
+				<!-- 比如你上传的jpg叫 ABC.jpg-->
+				<img src="<sp:property value='resourceUri'/>/可以修改.jpg">
+				<!-- 把“可以修改”字样替换成你所用的图片名如 ABC.jpg 就好，!!!不要把前面的斜杠给删了!!!...-->
+				<!-- 还有 首页因为会展现多个不同的列表 所以会有多个不同的jpg，记得是不同的就好-->
 
 				<ul>
-					<sp:iterator value="specialData.articleList(6286,1,0)">
+					<sp:iterator value="specialData.articleList(6286,10,0)"><!-- 括号里有三个数字，第一个是栏目ID,第二个是栏目下有多少篇文章，第三个是顺序写0或者1都行 栏目id需要改一下昂-->
 						<li>
 							<img src="<sp:property value='resourceUri'/>/triangle.png">
 							&nbsp;
@@ -90,13 +95,21 @@
 					</sp:iterator>
 				</ul>
 			</div>
+			<!-- 嗯 首页就这些了 --><!--哦不对 还有-->
+			<!-- 因为有五块（大概是）子栏目内容，所以第70行（行标在左边）到第100行需要再额外复制操作4次(注释被复制没关系) 然后每次要绑定不同的栏目ID-->
+
+
 
 
 
 		</div>
 	</div>
 	<div class="footer">
+
+		<!--这儿是页底文字...不过估计不用改了吧...-->
 		<span>一书一世界——海洋之子海洋之窗荣誉出品</span>
+
+
 	</div>
 	<script type="text/javascript"src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript">
